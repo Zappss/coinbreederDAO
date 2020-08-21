@@ -26,10 +26,17 @@ We believe that a *sandbox* free of these pressures will help bolster our abilit
 
 [How Voting Works in CBDAO](https://medium.com/@coinbreeder/guide-incentivized-governance-protocol-how-voting-works-in-cbdao-7ea3a35a0aec)
 
+[How Staking and Farming Works](https://medium.com/@coinbreeder/guide-staking-farming-bree-d47a66738a76https://medium.com/@coinbreeder/guide-staking-farming-bree-d47a66738a76)
+
+[Proposals and Fundraisers](https://medium.com/@coinbreeder/proposals-fundraisers-9222df60351e)
+
+[Smart Contract Audit Guideline](https://medium.com/@coinbreeder/bree-smart-contract-audit-guideline-109d60282a23)
+
 [The State of DAOs](https://medium.com/@coinbreeder/the-state-of-daos-1aecba88d9ed)
 
 [Public Participation in Decentralizing Governance](https://medium.com/@coinbreeder/public-participation-in-decentralizing-governance-c44ef3df58c4)
 
+[Regulations vs Industry-driven Standardization on DAOs](https://medium.com/@coinbreeder/government-driven-regulation-vs-industry-driven-standardization-on-daos-bcb747eb1d51)
 
 &nbsp;&nbsp;
  - ## [BREE](https://github.com/coinbreeder/coinbreederDAO/tree/master/bree)
