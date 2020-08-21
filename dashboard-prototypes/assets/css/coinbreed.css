@@ -1,0 +1,101 @@
+.coinbreed_tooltip_cus {
+	transform: translate(-5px, -10px);
+}
+
+.h1_small {
+	font-size: 1.5em;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.h171 {
+	height: 171px;
+}
+
+.custom_gap {
+	height: 45px;
+}
+
+.custom_inline, .custom_inline_w_title {
+	display: flex;
+	align-items: center;
+}
+
+.custom_inline_right {
+	margin-left: 10px;
+}
+
+.btn_custom_width {
+	width: 145px !important;
+}
+
+.center_text {
+	margin-right: auto !important;
+	margin-left: auto !important;
+	display: inline-block;
+}
+
+.input_with_button {
+	max-width: 70%;
+	width: 100%;
+}
+
+*[data-imagesrc] {
+	width: 20px;
+}
+
+.dd-select {
+	min-height: 36px;
+    padding: 7px 17px;
+}
+
+.farming_rate_custom_w {
+	width: 200px;
+}
+
+.btn_with_title {
+	margin-left: auto;
+}
+
+.nav_list_custom {
+	margin: 10px 0;
+}
+
+.mh133 {
+	min-height: 133px;
+}
+
+@media screen and (max-width: 768px) {
+	.farming_rate_custom_w {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.drop_this_at_mobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.input_with_button {
+		max-width: 55%;
+		width: 100%;
+	}
+
+	.farming_rate_custom_w {
+		width: 200px;
+	}
+
+	.custom_inline_w_title {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.btn_with_title {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Governance Dashboard | CBDAO</title>
+	<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400%7cOpen+Sans:300,400,600%7cPT+Serif:400i">
+	<link rel="stylesheet" href="./assets/css/bootstrap-custom.css">
+	<link rel="stylesheet" href="./assets/css/rootui.css">
+	<link rel="stylesheet" href="./assets/css/rootui-night.css" media="(night)" class="rui-nightmode-link">
+	<link rel="stylesheet" href="./assets/css/custom.css">
+	<link rel="stylesheet" href="./assets/css/coinbreed.css">
+</head>
+
+<body data-spy="scroll" data-target=".rui-page-sidebar" data-offset="140" class="rui-no-transition rui-navbar-autohide rui-section-lines">
+	<div class="rui-page-preloader" role="status">
+		<div class="rui-page-preloader-inner">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div class="rui-yaybar-bg"></div>
+	<nav class="rui-navbar rui-navbar-top rui-navbar-sticky">
+		<div class="rui-navbar-brand">
+			<a href="dashboard.html" class="rui-navbar-logo">
+				<img src="./assets/images/logo.png" data-src-night="./assets/images/logo-white.png" data-src-day="./assets/images/logo.png" alt="" width="120">
+			</a>
+			<!-- <button class="yay-toggle rui-yaybar-toggle" type="button"><span></span>
+			</button> -->
+		</div>
+		<div class="container-fluid">
+			<div class="rui-navbar-content">
+				<ul class="nav">
+					<li class="">
+						<a href="./index.html" class="dropdown-item">
+							<span data-feather="zap" class="text-secondary rui-icon rui-icon-stroke-1_5"></span> 
+							<span class="text-secondary">Staking</span> 
+						</a>
+						<!-- ---- Drop down here ---- -->
+					</li>
+
+					<li class="">
+						<a href="./farming.html" class="dropdown-item">
+							<span data-feather="zap" class="text-secondary rui-icon rui-icon-stroke-1_5"></span> 
+							<span class="text-secondary">Farming</span> 
+						</a>
+						<!-- ---- Drop down here ---- -->
+					</li>
+
+					<li class="">
+						<a href="./governance.html" class="dropdown-item">
+							<span data-feather="airplay" class="text-brand rui-icon rui-icon-stroke-1_5"></span> 
+							<span class="text-brand">Governance</span> 
+							<span class="rui-dropdown-circle"></span>
+						</a>
+						<!-- ---- Drop down here ---- -->
+					</li>
+				</ul>
+
+				<ul class="nav rui-navbar-right">
+					<!-- -------------------- Connect button & Wallet ------------------------- -->
+					<li class="dropdown" style="padding: 0">
+						<a href="#">
+							<button type="button" class="btn btn-brand">Connect Wallet</button>
+						</a>
+					</li>
+
+					<li class="dropdown ">
+						<a href="#">
+							<button type="button" class="btn btn-outline-secondary">0x90...aFF7</button>
+						</a>
+					</li>
+					
+
+					<!-- -------------------- Night Mode Toggle ------------------------- -->
+					<li class="dropdown dropdown-hover dropdown-triangle dropdown-keep-open"><a class="dropdown-item mnr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,12"><span class="btn btn-custom-round"><span data-feather="more-vertical" class="rui-icon rui-icon-stroke-1_5"></span></span></a>
+						<ul class="nav dropdown-menu">
+							<li>
+								<div class="custom-control custom-switch dropdown-item-switch">
+									<input type="checkbox" class="custom-control-input rui-nightmode-toggle" id="toggleNightMode">
+									<label class="dropdown-item custom-control-label" for="toggleNightMode"><span data-feather="moon" class="rui-icon rui-icon-stroke-1_5"></span>  <span>Night Mode</span>  <span class="rui-dropdown-circle"></span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-switch dropdown-item-switch">
+									<input type="checkbox" class="custom-control-input rui-sectionLines-toggle" id="toggleSectionLines">
+									<label class="dropdown-item custom-control-label" for="toggleSectionLines"><span data-feather="layout" class="rui-icon rui-icon-stroke-1_5"></span>  <span>Show section lines</span>  <span class="rui-dropdown-circle"></span>
+									</label>
+								</div>
+							</li>
+							<!-- <li class="dropdown-menu-label">Navbar</li>
+							<li>
+								<div class="custom-control custom-switch dropdown-item-switch">
+									<input type="checkbox" class="custom-control-input rui-darkNavbar-toggle" id="toggleDarkNavbar">
+									<label class="dropdown-item custom-control-label" for="toggleDarkNavbar"><span data-feather="menu" class="rui-icon rui-icon-stroke-1_5"></span>  <span>Dark</span>  <span class="rui-dropdown-circle"></span>
+									</label>
+								</div>
+							</li> -->
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- ------------------------------------------ Mobile Menu ------------------------------------------ -->
+	<div class="rui-navbar rui-navbar-mobile">
+		<div class="rui-navbar-head">
+			<!-- <button class="rui-yaybar-toggle rui-yaybar-toggle-inverse yay-toggle" type="button" aria-label="Toggle side navigation"><span></span>
+			</button> -->
+			<a class="rui-navbar-logo mr-auto" href="dashboard.html">
+				<img src="./assets/images/logo.png" data-src-night="./assets/images/logo-white.png" data-src-day="./assets/images/logo.png" alt="" width="70" height="90">
+			</a>
+
+			<div class="dropdown dropdown-triangle coibreed_custom_nav">
+				<!-- -------------------- Connect button & Wallet ------------------------- -->
+				<li class="dropdown" style="padding-right: 10px">
+					<a href="#">
+						<button type="button" class="btn btn-brand">Connect Wallet</button>
+					</a>
+				</li>
+
+				<li class="dropdown ">
+					<a href="#" class="drop_this_at_mobile">
+						<button type="button" class="btn btn-outline-secondary">0x90...aFF7</button>
+					</a>
+				</li>
+
+			</div>
+
+			<button class="navbar-toggler rui-navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation"><span></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse rui-navbar-collapse" id="navbarMobile">
+			<div class="rui-navbar-content">
+				<ul class="nav">
+
+					<li class="nav_list_custom">
+						<a href="./index.html" class="dropdown-item">
+							<span data-feather="zap" class="text-secondary rui-icon rui-icon-stroke-1_5"></span> 
+							<span class="text-secondary">Staking</span> 
+						</a>
+						<!-- ---- Drop down here ---- -->
+					</li>
+
+					<li class="nav_list_custom">
+						<a href="./farming.html" class="dropdown-item">
+							<span data-feather="zap" class="text-secondary rui-icon rui-icon-stroke-1_5"></span> 
+							<span class="text-secondary">Farming</span> 
+						</a>
+						<!-- ---- Drop down here ---- -->
+					</li>
+
+					<li class="nav_list_custom">
+						<a href="./governance.html" class="dropdown-item">
+							<span data-feather="airplay" class="text-brand rui-icon rui-icon-stroke-1_5"></span> 
+							<span class="text-brand">Governance</span> 
+							<span class="rui-dropdown-circle"></span>
+						</a>
+						<!-- ---- Drop down here ---- -->
+					</li>
+
+					<li class="dropdown dropdown-keep-open"><a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span data-feather="more-vertical" class="rui-icon rui-icon-stroke-1_5"></span> <span>Switch mode</span> <span class="rui-dropdown-circle"></span></a>
+						<ul class="nav dropdown-menu">
+							<li>
+								<div class="custom-control custom-switch dropdown-item-switch">
+									<input type="checkbox" class="custom-control-input rui-nightmode-toggle" id="toggleMobileNightMode">
+									<label class="dropdown-item custom-control-label" for="toggleMobileNightMode"><span data-feather="moon" class="rui-icon rui-icon-stroke-1_5"></span>  <span>Night Mode</span>  <span class="rui-dropdown-circle"></span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-switch dropdown-item-switch">
+									<input type="checkbox" class="custom-control-input rui-sectionLines-toggle" id="toggleMobileSectionLines">
+									<label class="dropdown-item custom-control-label" for="toggleMobileSectionLines"><span data-feather="layout" class="rui-icon rui-icon-stroke-1_5"></span>  <span>Show section lines</span>  <span class="rui-dropdown-circle"></span>
+									</label>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="rui-navbar-bg"></div>
+
+	<!-- -------------------------------- Main Content ------------------------------------ -->
+	<div class="rui-page content-wrap">
+
+		<div class="rui-page-title">
+			<div class="container-fluid">
+				<div class="custom_inline_w_title">
+					<div>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="dashboard.html">Governance Dashboard</a>
+								</li>
+							</ol>
+						</nav>
+						<h1 class="h1_small">MY STATISTICS</h1>
+					</div>
+
+					<!-- <div class="btn_with_title">
+						<a href="https://medium.com/@coinbreeder/guide-incentivized-governance-protocol-how-voting-works-in-cbdao-7ea3a35a0aec" target="_blank" class="btn btn-brand">
+							<span class="icon"><span data-feather="help-circle" class="rui-icon rui-icon-stroke-1_5"></span>
+							</span>
+							<span class="text">How Voting Works</span>
+						</a>
+					</div> -->
+
+				</div>
+
+					
+				<!-- <h1>Staking Dashboard</h1> -->
+			</div>
+					
+		</div>
+
+		<div class="rui-page-content">
+
+			<div class="container-fluid">
+				
+				<div class="row vertical-gap">
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-3 col-md-6">
+						<div class="rui-widget rui-widget-actions mh203">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="activity" class="rui-icon rui-icon-stroke-1_5"></span>
+									BALANCE
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+									    <p class="lead">
+										    1
+										    <span class="text-secondary">BREE</span>
+										</p>
+										<p class="lead">
+										    1
+										    <span class="text-secondary">TRUST SCORE (CBTS)</span>
+										</p>
+
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+
+					
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-3 col-md-6">
+						<div class="rui-widget rui-widget-actions mh203">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="dollar-sign" class="rui-icon rui-icon-stroke-1_5"></span>
+									FEES PAID
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+
+										<span class="lead">
+										    100
+										    <span class="text-secondary">BREE</span>
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+
+
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-3 col-md-6">
+						<div class="rui-widget rui-widget-actions mh203">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="trending-up" class="rui-icon rui-icon-stroke-1_5"></span>
+									TOTAL EARNED
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    100
+										    <span class="text-secondary">BREE</span>
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+
+
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-3 col-md-6">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+									PROPOSAL CREATED
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    2
+										    <span class="text-secondary">Proposals</span>
+										</span>
+
+										<!-- --------- ToolTip -------- -->
+										<div class="dropdown dropdown-hover dropdown-triangle dropdown-keep-open" style="margin-left: 5px">
+											<a class="dropdown-item mnr-8 coinbreed_tooltip_cus" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,12">
+												<span stroke-width="1.5" data-feather="info"></span>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right" style="max-width: 300px; width: 200px; padding: 10px;">
+												<li>
+													<small class="text-secondary custom_countdown_text">1 Accepted</small>
+												</li>
+												<li>
+													<small class="text-secondary custom_countdown_text">1 Rejected</small>
+												</li>
+											</ul>
+										</div>
+
+									</li>
+
+									<li class="list-group-item">
+										<button type="button" class="btn btn-brand btn_custom_width"" data-toggle="modal" data-target="#createProposalModal">
+											<span class="icon"><span data-feather="plus" class="rui-icon rui-icon-stroke-1_5"></span>
+											</span>
+											<span class="text center_text">CREATE</span>
+										</button>
+									</li>
+
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+
+
+				</div>
+				
+				
+				<div class="rui-gap-3"></div>
+				<h2>GLOBAL STATISTICS</h2>
+
+				<div class="row vertical-gap">
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-4 col-md-6">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="align-justify" class="rui-icon rui-icon-stroke-1_5"></span>
+									TOTAL PROPOSALS
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    2
+										    <span class="text-secondary">Proposals</span>
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-4 col-md-6">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+									ACTIVE PROPOSALS
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    3
+										    <span class="text-secondary">Proposals</span>
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-4 col-md-6">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+									INACTIVE PROPOSALS
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    2
+										    <span class="text-secondary">Proposals</span>
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-4 col-md-6">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+									ACCEPTED PROPOSALS
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    3
+										    <span class="text-secondary">Proposals</span>
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-4 col-md-6">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+									REJECTED PROPOSALS
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    2
+										    <span class="text-secondary">Proposals</span>
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+					<!-- ---------- Module ---------- -->
+					<div class="col-lg-4 col-md-6">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">  
+								<h4 class="rui-widget-title">
+									<span data-feather="bar-chart" class="rui-icon rui-icon-stroke-1_5"></span>
+									TOTAL VOTERS (VOTES)
+								</h4>
+							</div>
+
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+									<li class="list-group-item">
+										<span class="lead">
+										    189 Breeders (192 BREE)
+										</span>
+									</li>
+								</ul>
+										
+							</div>
+								
+						</div>
+					</div>
+				</div>
+
+				<div class="rui-gap-3"></div>
+				<h2>PROPOSALS</h2>
+
+				<div class="row vertical-gap">
+					<!-- ---------------- Module ----------------- -->
+					<div class="col-lg-6 col-md-12">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">
+								<h4 class="rui-widget-title">
+									<span data-feather="align-justify" class="rui-icon rui-icon-stroke-1_5"></span>
+									ACTIVE PROPOSAL
+								</h4>
+							</div>
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+
+									<li class="list-group-item">
+										<p class="fp_accordion m-0">
+											Introduce MTA as a BREE farming asset
+										</p>
+										<!-- --------------- Accordion --------------- -->
+										<div class="fp_panel rui-widget rui-widget-actions">
+											<!-- <div class="rui-widget-head">
+												<h4 class="rui-widget-title">
+													<span data-feather="align-justify" class="rui-icon rui-icon-stroke-1_5"></span>
+													ACTIVE PROPOSAL
+												</h4>
+											</div> -->
+											<div class="rui-widget-content">
+												<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="alert-circle" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">Introduce MTA as a BREE farming asset</a> 
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="minus" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">#3 opened 3 days ago by 0xffd..0d91 </a> 
+															</div>
+
+															<!-- --------- ToolTip -------- -->
+															<div class="dropdown dropdown-hover dropdown-triangle dropdown-keep-open" style="margin-left: 5px">
+																<a class="dropdown-item mnr-8 coinbreed_tooltip_cus" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,12">
+																	<span stroke-width="1.5" data-feather="clock"></span>
+																</a>
+																<ul class="dropdown-menu dropdown-menu-right" style="max-width: 300px; width: 200px; padding: 10px;">
+																	<li>
+																		<small class="text-secondary custom_countdown_text">13days 18hrs 4mins</small>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+													</li>
+
+													<li class="list-group-item">
+														<div class="barChart_width_p">
+															<canvas id="voteBarChart"></canvas>
+														</div>
+													</li>
+
+													<!-- <li class="list-group-item">
+														<div class="custom_inline">
+															<div class="rui-task-icon"><span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content custom_inline_right">
+																<a class="rui-task-title">YES</a> 
+															</div>
+														</div>
+
+														<div class="progress" data-toggle="tooltip" data-html="true" title="<div> <span>Votes: 100 BREE</span><br> <span>Combined Trust Score: 10.4 CBTS</span></div>">
+														    <div class="progress-bar bg-brand w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+
+
+
+													</li>
+
+													<li class="list-group-item">
+														<div class="custom_inline">
+															<div class="rui-task-icon"><span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content custom_inline_right">
+																<a class="rui-task-title">NO</a> 
+															</div>
+														</div>
+
+														<div class="progress" data-toggle="tooltip" data-html="true" title="<div> <span>Votes: 100 BREE</span><br> <span>Combined Trust Score: 10.4 CBTS</span></div>">
+														    <div class="progress-bar bg-danger w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</li> -->
+
+													<li class="list-group-item">
+														<button type="button" class="btn btn-brand btn_custom_width" data-toggle="modal" data-target="#yesProposalModal">
+															<span class="icon"><span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">YES</span>
+														</button>
+
+														<button type="button" class="btn btn-danger btn_custom_width mt_10_mobile" data-toggle="modal" data-target="#noProposalModal">
+															<span class="icon"><span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">NO</span>
+														</button>
+													</li>
+
+													<li class="list-group-item">
+														<button type="button" class="btn btn-brand btn_custom_width" data-toggle="modal" data-target="#chartModal">
+															<span class="icon"><span data-feather="pie-chart" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">VIEW CHART</span>
+														</button>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+									</li>
+
+									<li class="list-group-item">
+										<p class="fp_accordion m-0">
+											Change staking rates to 60% APY
+										</p>
+										<!-- --------------- Accordion --------------- -->
+										<div class="fp_panel rui-widget rui-widget-actions">
+											<!-- <div class="rui-widget-head">
+												<h4 class="rui-widget-title">
+													<span data-feather="align-justify" class="rui-icon rui-icon-stroke-1_5"></span>
+													ACTIVE PROPOSAL
+												</h4>
+											</div> -->
+											<div class="rui-widget-content">
+												<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="alert-circle" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">Change staking rates to 60% APY</a> 
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="minus" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">#3 opened 3 days ago by 0xffd..0d91 </a> 
+															</div>
+
+															<!-- --------- ToolTip -------- -->
+															<div class="dropdown dropdown-hover dropdown-triangle dropdown-keep-open" style="margin-left: 5px">
+																<a class="dropdown-item mnr-8 coinbreed_tooltip_cus" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,12">
+																	<span stroke-width="1.5" data-feather="clock"></span>
+																</a>
+																<ul class="dropdown-menu dropdown-menu-right" style="max-width: 300px; width: 200px; padding: 10px;">
+																	<li>
+																		<small class="text-secondary custom_countdown_text">13days 18hrs 4mins</small>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+													</li>
+
+													<li class="list-group-item">
+														<div class="barChart_width_p">
+															<canvas id="voteBarChart1"></canvas>
+														</div>
+													</li>
+
+													<!-- <li class="list-group-item">
+														<div class="custom_inline">
+															<div class="rui-task-icon"><span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content custom_inline_right">
+																<a class="rui-task-title">YES</a> 
+															</div>
+														</div>
+
+														<div class="progress" data-toggle="tooltip" data-html="true" title="<div> <span>Votes: 100 BREE</span><br> <span>Combined Trust Score: 10.4 CBTS</span></div>">
+														    <div class="progress-bar bg-brand w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<div class="custom_inline">
+															<div class="rui-task-icon"><span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content custom_inline_right">
+																<a class="rui-task-title">NO</a> 
+															</div>
+														</div>
+														<div class="progress" data-toggle="tooltip" data-html="true" title="<div> <span>Votes: 100 BREE</span><br> <span>Combined Trust Score: 10.4 CBTS</span></div>">
+														    <div class="progress-bar bg-danger w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</li> -->
+
+													<li class="list-group-item">
+														<button type="button" class="btn btn-brand btn_custom_width" data-toggle="modal" data-target="#yesProposalModal">
+															<span class="icon"><span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">YES</span>
+														</button>
+
+														<button type="button" class="btn btn-danger btn_custom_width mt_10_mobile" data-toggle="modal" data-target="#noProposalModal">
+															<span class="icon"><span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">NO</span>
+														</button>
+													</li>
+													
+													<li class="list-group-item">
+														<button type="button" class="btn btn-brand btn_custom_width" data-toggle="modal" data-target="#chartModal">
+															<span class="icon"><span data-feather="pie-chart" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">VIEW CHART</span>
+														</button>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- ---------------- Module ----------------- -->
+					<div class="col-lg-6 col-md-12">
+						<div class="rui-widget rui-widget-actions">
+							<div class="rui-widget-head">
+								<h4 class="rui-widget-title">
+									<span data-feather="align-justify" class="rui-icon rui-icon-stroke-1_5"></span>
+									INACTIVE PROPOSAL
+								</h4>
+							</div>
+							<div class="rui-widget-content">
+								<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+
+									<li class="list-group-item">
+										<p class="fp_accordion m-0">
+											Increase farmed yield claim fees to 0.01 ETH
+										</p>
+										<!-- --------------------- Accordion --------------------- -->
+										<div class="fp_panel rui-widget rui-widget-actions">
+											<!-- <div class="rui-widget-head">
+												<h4 class="rui-widget-title">
+													<span data-feather="align-justify" class="rui-icon rui-icon-stroke-1_5"></span>
+													INACTIVE PROPOSAL
+												</h4>
+											</div> -->
+											<div class="rui-widget-content">
+												<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="check" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">Increase farmed yield claim fees to 0.01 ETH</a> 
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="minus" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">#1 opened 4 days ago by 0xffd..0d91 </a> 
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="minus" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<span class="rui-task-title">Status: <span>Accepted</span></span>
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<button type="button" class="btn btn-brand btn_custom_width" data-toggle="modal" data-target="#chartModal1">
+															<span class="icon"><span data-feather="pie-chart" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">VIEW CHART</span>
+														</button>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+									</li>
+
+
+									<li class="list-group-item">
+										<p class="fp_accordion m-0">
+											Change proposal creation fees to 500 BREE
+										</p>
+										<!-- --------------------- Accordion --------------------- -->
+										<div class="fp_panel rui-widget rui-widget-actions">
+											<!-- <div class="rui-widget-head">
+												<h4 class="rui-widget-title">
+													<span data-feather="align-justify" class="rui-icon rui-icon-stroke-1_5"></span>
+													INACTIVE PROPOSAL
+												</h4>
+											</div> -->
+											<div class="rui-widget-content">
+												<ul class="list-group list-group-flush rui-widget-list rui-widget-task-list">
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">Change proposal creation fees to 500 BREE</a> 
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="minus" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<a class="rui-task-title">#1 opened 6 days ago by 0xffd..0d91 </a> 
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<div class="rui-task rui-task-success">
+															<div class="rui-task-icon"><span data-feather="minus" class="rui-icon rui-icon-stroke-1_5"></span>
+															</div>
+															<div class="rui-task-content">
+																<span class="rui-task-title">Status: <span>Rejected</span></span>
+															</div>
+														</div>
+													</li>
+
+													<li class="list-group-item">
+														<button type="button" class="btn btn-brand btn_custom_width" data-toggle="modal" data-target="#chartModal2">
+															<span class="icon"><span data-feather="pie-chart" class="rui-icon rui-icon-stroke-1_5"></span>
+															</span>
+															<span class="text center_text">VIEW CHART</span>
+														</button>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+										
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				
+
+				</div>
+
+			</div>
+		</div>
+
+		<footer class="rui-footer">
+			<div class="container-fluid">
+				<p class="mb-0">2020 &copy; <a href="https://coinbreeder.com">Coinbreeder.com.</a></p>
+			</div>
+		</footer>
+	</div>
+	
+	<!-- -------------------------- Modal ---------------------------- -->
+	<div class="modal fade" id="createProposalModal" tabindex="-1" role="dialog" aria-labelledby="createProposalModalLabel" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel"></h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+
+	                <form class="#">
+					    <div class="row vertical-gap sm-gap">
+					    	<div class="col-12">
+						    	<label for="coin">Subject Matter</label>
+					    		<select id="" class="custom-select">
+								    <option value="staking rate">Staking Rates</option>
+								    <option value="farming rate">Farming Rates</option>
+								    <option value="goverment asset">Add/Delete Governance Asset</option>
+								    <option value="Staker Whitelisting">Staker Whitelisting</option>
+								    <option value="Staking Period">Staking Period</option>
+								    <option value="Staked Reward Claiming Fees">Staked Reward Claiming Fees</option>
+								    <option value="Farmed Yield Claiming Fees">Farmed Yield Claiming Fees</option>
+								    <option value="Governance Protocol Related">Governance Protocol Related</option>
+								</select>
+					    	</div>
+
+					        <div class="col-12">
+					        	<label for="proposal">Your Proposal</label>
+    							<textarea class="form-control" id="proposal" rows="3"></textarea>
+					        </div>
+							
+							<div class="col-12">
+								<div class="custom-control custom-checkbox">
+								    <input type="checkbox" class="custom-control-input" id="paymentAgree">
+								    <label class="custom-control-label" for="paymentAgree">I agree to pay 200 BREE as fees for creating the proposal.</label>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<div class="custom-control custom-checkbox">
+								    <input type="checkbox" class="custom-control-input" id="trustAgree">
+								    <label class="custom-control-label" for="trustAgree">Your trust score will be deducted for rejected proposals.</label>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<div class="custom-control custom-checkbox">
+								    <input type="checkbox" class="custom-control-input" id="shareAgree">
+								    <label class="custom-control-label" for="shareAgree">Your 5% share of the total votes paid in BREE by users on this proposal will only be distributed upon this proposal ending as 'accepted'.</label>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<div class="custom-control custom-checkbox">
+								    <input type="checkbox" class="custom-control-input" id="voteAgree">
+								    <label class="custom-control-label" for="voteAgree">I understand that the proposal voting phase will run for 7 days and should continue to do so until a resolution is met."</label>
+								</div>
+							</div>
+
+
+					    </div>
+					</form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-brand">
+	                	Create
+	                </button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- -------------------------- Modal ---------------------------- -->
+	<div class="modal fade" id="yesProposalModal" tabindex="-1" role="dialog" aria-labelledby="yesProposalModalLabel" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel"></h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+
+	                <form class="#">
+					    <div class="row vertical-gap sm-gap">
+					    	
+							<div class="col-12">
+					            <label for="amount">Amount</label>
+					            <div class="input-group">
+					            	<input type="text" class="form-control" id="amount">
+						            <div class="input-group-append">
+									    <button class="btn btn-brand">VOTE YES</button>
+									</div>
+					            </div>
+					        </div>
+					        
+					    </div>
+					</form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <!-- <button type="button" class="btn btn-brand">
+	                	VOTE YES
+	                </button> -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	
+	<!-- -------------------------- Modal ---------------------------- -->
+	<div class="modal fade" id="noProposalModal" tabindex="-1" role="dialog" aria-labelledby="noProposalModalLabel" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel"></h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+
+	                <form class="#">
+					    <div class="row vertical-gap sm-gap">
+					    	
+							<div class="col-12">
+					            <label for="amount">Amount</label>
+					            <div class="input-group">
+					            	<input type="text" class="form-control" id="amount">
+						            <div class="input-group-append">
+									    <button class="btn btn-danger">VOTE NO</button>
+									</div>
+					            </div>
+					        </div>
+					        
+					    </div>
+					</form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <!-- <button type="button" class="btn btn-brand">
+	                	VOTE YES
+	                </button> -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- -------------------------- Modal ---------------------------- -->
+	<div class="modal fade" id="chartModal" tabindex="-1" role="dialog" aria-labelledby="chartModalLabel" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel"></h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+	                </button>
+	            </div>
+	            <div class="modal-body modal_body_mobile">
+
+	                <form class="#">
+					    <div class="row vertical-gap sm-gap">
+					    	
+							<div class="col-12">
+					            <p class="m0">Votes Count</p>
+					            <div class="chart_width_p">
+					            	<canvas id="voteCountChart"></canvas>
+					            </div>
+					        </div>
+
+					        <div class="col-12">
+					            <p class="m0">Trust Scores</p>
+					            <div class="chart_width_p">
+					            	<canvas id="trustScoreChart"></canvas>
+					            </div>
+
+					        </div>
+
+					        <div class="col-12">
+					            <p class="m0">Votes Allocation</p>
+					            <div class="chart_width_p1">
+					            	<canvas id="voteAllocationChart"></canvas>
+					            </div>
+
+					        </div>
+					        
+					    </div>
+					</form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <!-- <button type="button" class="btn btn-brand">
+	                	VOTE YES
+	                </button> -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- -------------------------- Modal ---------------------------- -->
+	<div class="modal fade" id="chartModal1" tabindex="-1" role="dialog" aria-labelledby="chartModal1Label" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel"></h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+	                </button>
+	            </div>
+	            <div class="modal-body modal_body_mobile">
+
+	                <form class="#">
+					    <div class="row vertical-gap sm-gap">
+					    	
+							<div class="col-12">
+					            <p class="m0">Votes Count</p>
+					            <div class="chart_width_p">
+					            	<canvas id="Inactive_a_voteCountChart"></canvas>
+					            </div>
+					        </div>
+
+					        <div class="col-12">
+					            <p class="m0">Trust Scores</p>
+					            <div class="chart_width_p">
+					            	<canvas id="Inactive_a_trustScoreChart"></canvas>
+					            </div>
+					        </div>
+
+					        <div class="col-12">
+					            <p class="m0">Votes Allocation</p>
+					            <div class="chart_width_p1">
+					            	<canvas id="Inactive_a_voteAllocationChart"></canvas>
+					            </div>
+					        </div>
+					        
+					    </div>
+					</form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <!-- <button type="button" class="btn btn-brand">
+	                	VOTE YES
+	                </button> -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- -------------------------- Modal ---------------------------- -->
+	<div class="modal fade" id="chartModal2" tabindex="-1" role="dialog" aria-labelledby="chartModal2Label" aria-hidden="true">
+	    <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel"></h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span data-feather="x" class="rui-icon rui-icon-stroke-1_5"></span>
+	                </button>
+	            </div>
+	            <div class="modal-body modal_body_mobile">
+
+	                <form class="#">
+					    <div class="row vertical-gap sm-gap">
+					    	
+							<div class="col-12">
+					            <p class="m0">Votes Count</p>
+					            <div class="chart_width_p">
+					            	<canvas id="Inactive_r_voteCountChart"></canvas>
+					            </div>
+					        </div>
+
+					        <div class="col-12">
+					            <p class="m0">Trust Scores</p>
+					            <div class="chart_width_p">
+					            	<canvas id="Inactive_r_trustScoreChart"></canvas>
+					            </div>
+					        </div>
+
+					        <div class="col-12">
+					            <p class="m0">Votes Allocation</p>
+					            <div class="chart_width_p1">
+					            	<canvas id="Inactive_r_voteAllocationChart"></canvas>
+					            </div>
+					        </div>
+					        
+					    </div>
+					</form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <!-- <button type="button" class="btn btn-brand">
+	                	VOTE YES
+	                </button> -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+		
+
+	<script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="./assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+	<script src="./assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./assets/vendor/feather-icons/dist/feather.min.js"></script>
+	<script src="./assets/vendor/chart.js/dist/Chart.min.js"></script>
+	<script src="./assets/vendor/sortablejs/Sortable.min.js"></script>
+	<script src="./assets/js/rootui.js"></script>
+	<script src="./assets/js/rootui-init.js"></script>	
+	<script src="./assets/js/governance_chart.js"></script>
+	<script src="./assets/js/accordion.js"></script>
+	<script type="text/javascript">
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip();
+		})
+
+		
+
+
+	</script>
+</body>
+
+</html>

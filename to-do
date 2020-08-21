@@ -1,0 +1,52 @@
+Priorities
+- Submit contracts audits - in progress
+- Fix potential issues 
+- Deploy BREE on mainnet
+- Deploy a swap sBREE <> BREE contract
+- Deploy off-chain oracle to fetch governance asset values for determining farming rates
+- Allocate initial liquidity (avg. weighted price of sBREE until the swap date) & burn leftover tokens
+- Integrate BREE_STAKE_FARM contract on the dashboard
+- Create a video (landing page) - completed
+- Initiate marketing plans
+
+
+DAVID
+- improved website UI/UX - in progress
+- token swap dashboard needed - completed
+- prototypes for BREE mobile wallet
+
+EUGENE
+- sBREE <> BREE token swap contract - completed requires testing
+- token swap directory updates - completed
+- governance smart contract
+- oracle solution for determining fees at fixed USD prices of BREE
+- trust score token
+- initiate research on cross-chain tokens
+- set up repo for governance
+
+DANIEL
+- create a forum for governance discussions - completed (https://forum.coinbreeder.com)
+- integrate BSF contract on dashboard
+- integrate token swap contract on dashboard
+- initiate marketing plans
+- created a meme competition for the community (https://medium.com/@coinbreeder/bree-twitter-memes-competition-991716bf18c5)
+- article on staking & farming written (https://medium.com/@coinbreeder/guide-staking-farming-bree-d47a66738a76)
+
+
+
+COMPLETED
+- public sale
+- prototypes for staking & farming
+- prototype for governance 
+- public testing phase
+
+
+NOTES
+Script for video needs to be reviewed - David - Review complete
+Governance contract discussions AUG 15 2pm UTC (zvc) - Eugene
+Review farming rates AUG 16 2pm UTC (zvc) - Eugene
+Video confirmation required - David - confirmed
+Updated readme for CBDAO-General repo - Eugene
+Governance contract discussion II AUG 19 2pm UTC (zvc) - Eugene
+Ropsten testing for token swaps AUG 20 - Eugene - completed
+Governance contract frontend discussion 21 August 2pm UTC - DAV
